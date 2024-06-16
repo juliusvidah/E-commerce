@@ -1,0 +1,80 @@
+@import '../scss/include';
+//! variables
+$nav-bg: white;
+$nav-co: white;
+$nav-fs: 2vw;
+
+// @mixin flex {
+//     display: flex;
+//     align-content: center;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+#Nav{
+  background-color: $nav-bg;
+  font-size: $nav-fs;
+  padding: 0.5rem 1rem;
+  ul{
+     @include flex_between();
+     padding: 1rem;
+     list-style-type: none;
+     li{
+         @include flex_between();
+          gap: 1rem;
+          font-weight: bold;
+          padding: 0.5rem 2rem;
+          a{
+                color: black;
+                text-decoration: none;
+                border: none;
+                border-radius: none;
+        
+            }
+        }
+
+    }
+    .menu{
+        display: none;
+    }
+    @include mobile{
+        .group1,.group2{
+            display: none;
+        }
+        .menu{
+            display: flex;
+            cursor: pointer;
+        }
+    }
+    @include desktop{
+        .group1,.group2{
+            display: flex;
+        }
+        .menu{
+            display: none;
+        }
+    }
+    .popup{
+        // border: 1px solid red;
+        padding: 1rem;
+        position: fixed;
+        right: 0px;
+        top: 60px;
+        width: 30%;
+        li{
+            @include flex_between();
+            flex-direction: column;
+            a{
+                cursor: pointer;
+                text-decoration: none;
+                color: black;
+                padding: 1rem;
+            }
+        }
+        @include mobile{
+            display: block;
+        }
+        @include desktop{
+            display: none;
+        }
+    }
+}
