@@ -49,6 +49,6 @@ export const navGroup2 = [
     {
         id: 9,
         text: cart,
-        path: '#'
+        path: '/cat'
     }
 ]

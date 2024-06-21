@@ -8,7 +8,8 @@ import Contact from './components/contact/Contact'
 import Shop from './components/shop/Shop'
 import Error from './components/error/Error'
 import About from './components/about/About'
-import Logo from './components/logo/Logo'
+import Footer from './components/footer/Footer'
+import Cat from './components/cat/Cat'
 
 function App() {
   
@@ -20,11 +21,13 @@ function App() {
       {/* <Route path='/' element={<Logo />} /> */}
       <Route path='/' element={<Home />} />
       <Route path='/shop' element={<Shop />} />
-      <Route path='blog/' element={<Blog />} />
+      <Route path='/blog' element={<Blog />} />
+      <Route path='/cat' element={<Cat />} />
       <Route path='about/' element={<About />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/*' element={<Error />} />
      </Routes>
+     <Footer />
     </>
   )
 }

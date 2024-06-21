@@ -49,7 +49,7 @@ const Nav = () => {
            <li className='group2'>
            {
               navGroup2.map(each=>(
-              <img key={each.id} src={each.text} alt='icon1' />
+             <Link> <img key={each.id} src={each.text} path='/cat'  alt='icon1' /></Link>
               ))
             }
              {/* <span> Cart[{cart}] </span> */}
@@ -70,8 +70,8 @@ const Nav = () => {
            <li className='group2'>
            {
               navGroup2.map(each=>(
-                // <Link onClick={(e)=> handleToggle()} to={each.path}> {each.text} </Link>
-                <img key={each.id} src={each.text} alt='icon' />
+                <Link onClick={(e)=> handleToggle()} to={each.path}> {each.text} </Link>
+                // <img key={each.id} src={each.text} alt='icon' />
               ))
             }
              <span> Cart[{cart}] </span>

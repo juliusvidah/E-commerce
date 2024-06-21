@@ -1,0 +1,48 @@
+*{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+};
+
+.mainBlog{
+background: url("https://res.cloudinary.com/degnky4ab/image/upload/v1718792754/pga3sintftpnb9ojxhx6.png");
+height: 316px;
+// width: 70vw;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+};
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #FAF3EA;
+    ;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.pagination span {
+    padding: 10px 15px;
+    margin: 0 1px;
+    background-color:#FAF3EA;
+    border-radius: 5px;
+}
+
+.blog1{
+    width: 60vw;
+    margin: 2.5rem;
+};
+.blog2{
+    width: 60vw;
+    margin: 2.5rem;
+};
