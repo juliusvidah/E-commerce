@@ -5,7 +5,7 @@ import { RangeImages, cloudName, furniro, main, products, share, shop, slick } f
 import { Image, Transformation } from 'cloudinary-react';
 import './home.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Link } from 'react-router-dom';
+import ShowMore from '../showmore/ShowMore';
 
 
 const Home = () => {
@@ -42,9 +42,10 @@ const Home = () => {
        <LazyLoadImage className='products' src={products.product2}/> 
        <LazyLoadImage className='products' src={products.product3}/> 
        <LazyLoadImage className='products' src={products.product4}/>
+       <ShowMore />
        </div>
        <div>
-       <Link> <button className='btn'>Show more</button></Link>
+       {/* <Link> <button className='btn'>Show more</button></Link> */}
        </div>
        <div className="slick">
        <LazyLoadImage className='slick1' src={slick.slick1}/>
