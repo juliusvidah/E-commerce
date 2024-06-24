@@ -1,9 +1,11 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 import { cartNumber } from '../atoms/Cart'
-import { RangeImages, cloudName, furniro, main, products, share, slick } from '../cloudimages/Cloud';
+import { RangeImages, cloudName, furniro, main, products, share, shop, slick } from '../cloudimages/Cloud';
 import { Image, Transformation } from 'cloudinary-react';
 import './home.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -12,72 +14,41 @@ const Home = () => {
     <div>
       <section className="browse-the-range">
        <div className='main'>
-       <Image className='main1' cloudName={cloudName} publicId={main.main1}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+ <LazyLoadImage className='main1' src={main.main1}/> 
        </div>
      <div className="head">
      <h3>Browse The Range</h3>
      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
      </div>
 
-      <div className="rangeImages">
-      <Image cloudName={cloudName} publicId={RangeImages.dinning}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-      <Image cloudName={cloudName} publicId={RangeImages.living}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-      <Image cloudName={cloudName} publicId={RangeImages.bedroom}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+      <div className="RangeImages">
+      <LazyLoadImage className='RangeImages' src={RangeImages.dinning}/> 
+      <LazyLoadImage className='RangeImages' src={RangeImages.living}/> 
+      <LazyLoadImage className='RangeImages' src={RangeImages.bedroom}/> 
         </div> 
       
       </section>
 
-       <h3 className='head'>Our Products</h3>
+       <h2 className='head'>Our Products</h2>
        
        <div className="products">
-       <Image cloudName={cloudName} publicId={products.product1}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product2}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product3}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product4}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+       <LazyLoadImage className='products' src={products.product1}/> 
+       <LazyLoadImage className='products' src={products.product2}/> 
+       <LazyLoadImage className='products' src={products.product3}/> 
+       <LazyLoadImage className='products' src={products.product4}/> 
        </div>
        <div className="products">
-       <Image cloudName={cloudName} publicId={products.product5}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product6}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product7}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={products.product8}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+       <LazyLoadImage className='products' src={products.product1}/> 
+       <LazyLoadImage className='products' src={products.product2}/> 
+       <LazyLoadImage className='products' src={products.product3}/> 
+       <LazyLoadImage className='products' src={products.product4}/>
        </div>
        <div>
-        <button className='btn'>Show more</button>
+       <Link> <button className='btn'>Show more</button></Link>
        </div>
        <div className="slick">
-          {/* <h2>50+ Beautiful rooms 
-          inspiration</h2>
-          <p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p> */}
-       <Image className='slick1' cloudName={cloudName} publicId={slick.slick1}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image className='slick2' cloudName={cloudName} publicId={slick.slick2}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+       <LazyLoadImage className='slick1' src={slick.slick1}/>
+       {/* <LazyLoadImage className='slick2' src={slick.slick2}/> */}
        </div>
 
        <div className="furniro">
@@ -92,40 +63,17 @@ const Home = () => {
 
        <div className="share">
      <div className="group1">
-     <Image cloudName={cloudName} publicId={share.share1}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share2}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share3}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share4}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-     </div>
-       <Image cloudName={cloudName} publicId={share.share5}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-   <div className="group2">
-   <Image cloudName={cloudName} publicId={share.share6}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share7}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share8}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={share.share9}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+     <LazyLoadImage className='share' src={share.share1}/>
+     <LazyLoadImage className='share' src={share.share2}/>
+     <LazyLoadImage className='share' src={share.share3}/>
+     <LazyLoadImage className='share' src={share.share4}/>
+     <LazyLoadImage className='share' src={share.share5}/>
+     <LazyLoadImage className='share' src={share.share6}/>
+     <LazyLoadImage className='share' src={share.share7}/>
+     <LazyLoadImage className='share' src={share.share8}/>
+     <LazyLoadImage className='share' src={share.share9}/>
    </div>
        </div>
-
-       <h4>Cart: {cart}</h4>
-       <button onClick={()=> setCart((prev)=> prev + 1)}>Add to cart</button>
     </div>
   )
 }

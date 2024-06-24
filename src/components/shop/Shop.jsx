@@ -1,7 +1,7 @@
 import React from 'react'
 import { cloudName, products, shop, slick } from '../cloudimages/Cloud'
-import { Image, Transformation } from 'cloudinary-react'
 import './shop.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 const Shop = () => {
@@ -12,60 +12,22 @@ const Shop = () => {
        
       </div>
 <div className="shop">
-       <Image cloudName={cloudName} publicId={shop.product1}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product2}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product3}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product4}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>      
-       </div>
-       <div className="shop">
-       <Image cloudName={cloudName} publicId={shop.product5}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product6}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product7}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product8}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       </div>
-       <div className="shop">
-       <Image cloudName={cloudName} publicId={shop.product5}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product6}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product7}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product8}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       </div>
-       <div className="shop">
-       <Image cloudName={cloudName} publicId={shop.product5}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product6}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product7}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
-       <Image cloudName={cloudName} publicId={shop.product8}>
-   <Transformation crop="scale" width="200" angle="0" />
- </Image>
+<LazyLoadImage className='shop' src={products.product1}/>
+<LazyLoadImage className='shop' src={products.product2}/>
+<LazyLoadImage className='shop' src={products.product3}/>
+<LazyLoadImage className='shop' src={products.product4}/>
+<LazyLoadImage className='shop' src={products.product1}/>
+<LazyLoadImage className='shop' src={products.product2}/>
+<LazyLoadImage className='shop' src={products.product3}/>
+<LazyLoadImage className='shop' src={products.product4}/>
+<LazyLoadImage className='shop' src={products.product1}/>
+<LazyLoadImage className='shop' src={products.product2}/>
+<LazyLoadImage className='shop' src={products.product3}/>
+<LazyLoadImage className='shop' src={products.product4}/>
+<LazyLoadImage className='shop' src={products.product1}/>
+<LazyLoadImage className='shop' src={products.product2}/>
+<LazyLoadImage className='shop' src={products.product3}/>
+<LazyLoadImage className='shop' src={products.product4}/>
        </div>
             <div className="pagination">
                 <span>1</span>
